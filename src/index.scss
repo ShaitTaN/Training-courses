@@ -1,0 +1,20 @@
+@import url('./fonts/fonts.scss');
+@import url('./variables.css');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Styrene A Web', sans-serif;
+	font-size: 16px;
+	background-color: var(--BgColor);
+	color: var(--textColor);
+}
+
+.container{
+	max-width: 1280px;
+	margin: 0 auto;
+}
