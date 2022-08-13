@@ -1,0 +1,98 @@
+.course__module {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  &:first-child {
+    margin-right: 45px;
+  }
+  &-title {
+    font-size: 32px;
+    position: relative;
+    font-weight: 400;
+    span {
+      display: none;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: -30px;
+      background-color: var(--red);
+    }
+  }
+  &-text {
+    width: 60%;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 915px) {
+  .course__module {
+    flex-direction: column;
+    width: 100%;
+    cursor: pointer;
+    &:first-child {
+      margin-right: 0px;
+    }
+    &-title {
+      background-color: #f7f7f7;
+      font-size: 18px;
+      font-weight: 300;
+      padding: 15px 70px;
+      margin-bottom: 10px;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      span {
+        display: block;
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        left: 24px;
+        top: calc(50% - 1px);
+        border-radius: 30%;
+        background-color: #d9d9d9;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 18px;
+          height: 2px;
+          left: 0;
+          top: calc(50% - 1px);
+          border-radius: 30%;
+          background-color: #d9d9d9;
+          transform-origin: 50%;
+          transform: rotate(90deg);
+          opacity: 1;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &.active {
+        background-color: var(--red);
+        color: var(--textSecColor);
+        span {
+          background-color: #fff;
+          &::before {
+            transform: rotate(0deg);
+            opacity: 0;
+          }
+        }
+        & ~ .course__module-text {
+          display: block;
+        }
+      }
+      &::before {
+        display: none;
+      }
+    }
+    &-text {
+      font-size: 15px;
+      margin-left: 14px;
+      margin-bottom: 20px;
+      display: none;
+			width: 100%;
+    }
+  }
+}

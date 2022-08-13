@@ -1,0 +1,25 @@
+.course {
+  margin-top: 70px;
+  &__title {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 70px;
+  }
+  &__modules {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 915px) {
+  .course {
+    &__title {
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+    &__modules {
+      flex-direction: column;
+    }
+  }
+}

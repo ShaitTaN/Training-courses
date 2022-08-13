@@ -1,20 +1,39 @@
-@import url('./fonts/fonts.scss');
-@import url('./variables.css');
+@import url("./fonts/fonts.scss");
+@import url("./variables.css");
 
-*{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-	font-family: 'Styrene A Web', sans-serif;
-	font-size: 16px;
-	background-color: var(--BgColor);
-	color: var(--textColor);
+body {
+  font-family: "Styrene A Web", sans-serif;
+  font-size: 16px;
+  background-color: var(--BgColor);
+  color: var(--textColor);
 }
 
-.container{
-	max-width: 1280px;
-	margin: 0 auto;
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.list {
+  list-style: none;
+	li{
+		margin-bottom: 10px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+  li::before {
+    content: "\2022";
+    color: var(--red);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -14px;
+  }
 }
